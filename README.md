@@ -7,10 +7,10 @@ contents of Howard M. Heys excellent
 
 ## The Cipher
 [cipher.py](src/cipher.py) contains an implementation of the simple cipher used 
-for the cryptanalysis. Although simple, it uses a 10 byte key split into 5 round keys,
-each independent of each other. If chosen randomly, brute forcing this key would 
+for the cryptanalysis. Although simple, it uses a 10 byte key split into 5 
+independent round keys. If chosen randomly, brute forcing this key would 
 require trying up to 2^80 different keys (actually somewhat less since some keys 
-are equivalent, e.g. c7e69**0**b1**f**1ac05b15481 and c7e69**e**b1**b**1ac05b15481). 
+are equivalent, e.g. `c7e690b1f1ac05b15481` and `c7e69eb1b1ac05b15481`). 
 While certainly feasible with enough hardware, brute forcing the cipher key 
 is still time-consuming and costly. However, the cipher has poor 
 differential and linear properties which allows us to break the key in minutes.
